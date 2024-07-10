@@ -1,3 +1,4 @@
+import App from "../../app/App";
 function Lesson06() {
     // * TypeScript
   
@@ -110,6 +111,7 @@ function Lesson06() {
     return (
       <div className='lesson-container'>
         <h4>Lesson 06</h4>
+        <App />
       </div>
     );
   }
