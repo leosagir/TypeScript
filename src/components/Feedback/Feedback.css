@@ -1,0 +1,23 @@
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .like-dislike-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-like, .feedback-dislike {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+  }
+  
+  .feedback-reset {
+    margin-top: 20px;
+  }
+  
+  

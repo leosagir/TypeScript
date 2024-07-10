@@ -1,0 +1,33 @@
+.hero-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.hero-container.dark {
+    background-color: #333;
+    color: white;
+}
+
+.hero-container img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.hero-container span {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+}
+
+.hero-container.dark span {
+    background-color: #444;
+}
