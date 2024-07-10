@@ -2,22 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
+    gap: 20px; /* Расстояние между карточками */
     padding: 20px;
 }
-/* .ForceUsersGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    width: 100%;
-    gap: 10px;
-  } */
 
 .hero-container {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 20px;
-    width: 250px;
+    width: 250px; /* Фиксированная ширина карточки */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: background-color 0.3s ease;
@@ -31,6 +25,7 @@
 .hero-container img {
     border-radius: 10px;
     margin-bottom: 10px;
+    width: 100%; /* Заполнение ширины родительского контейнера */
 }
 
 .hero-container span {
@@ -44,4 +39,3 @@
 .hero-container.dark span {
     background-color: #444;
 }
-

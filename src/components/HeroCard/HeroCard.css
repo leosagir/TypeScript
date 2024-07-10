@@ -7,7 +7,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: background-color 0.3s ease;
-    margin: 10px;
+    margin: 10px; /* Отступы между карточками */
 }
 
 .hero-container.dark {
