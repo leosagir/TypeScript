@@ -1,4 +1,4 @@
-import React from 'react';
+
 import './Lesson04.css';
 import { forceUsers } from './data';
 
