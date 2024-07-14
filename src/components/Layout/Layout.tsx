@@ -1,5 +1,6 @@
 import Lesson04 from '../../lessons/Lesson04/Lesson04'
 import HeroCard from '../HeroCard/HeroCard'
+import StarWarsGallery from '../StarWarsGallery/StarWarsGallery'
 import styles from './Layout.module.css'
 
 function Layout(){
@@ -11,7 +12,7 @@ function Layout(){
             </header>
         <main className={styles.main}>
             main
-            <Lesson04/>
+           <StarWarsGallery/>
             </main>
         <footer className={styles.footer}>
             footer

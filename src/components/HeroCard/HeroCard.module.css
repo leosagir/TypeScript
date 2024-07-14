@@ -1,4 +1,9 @@
-.hero-container {
+
+ .heroContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -7,27 +12,28 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     transition: background-color 0.3s ease;
-    margin: 10px; /* Отступы между карточками */
-}
-
-.hero-container.dark {
+    margin: 10px;
+  }
+  
+  .heroContainer.dark {
     background-color: #333;
     color: white;
-}
-
-.hero-container img {
+  }
+  
+  .heroContainer img {
     border-radius: 10px;
     margin-bottom: 10px;
-}
-
-.hero-container span {
+  }
+  
+  .colorSpan {
     display: inline-block;
     margin-right: 5px;
     padding: 5px;
     background-color: #e0e0e0;
     border-radius: 5px;
-}
-
-.hero-container.dark span {
+  }
+  
+  .dark .colorSpan {
     background-color: #444;
-}
+  }
+   
