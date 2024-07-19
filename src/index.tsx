@@ -10,20 +10,22 @@ import Lesson09 from './lessons/lesson09/Lesson09';
 import Lesson10 from './lessons/lesson10/Lesson10';
 import CatFact from './lessons/lesson10/Lesson10';
 import Lesson11 from './lessons/lesson11/Lesson11';
-import FormGender from './components/FormGender/FormGender';
+import Lesson12 from './lessons/Lesson12/Lesson12';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <>
+  <Lesson12/>
+  
   {/* <Layout/> */}
  {/* <CatFact/> */}
     {/* <App />
     <Lesson06/>
     <Lesson07 /> */}
     {/* <Lesson11/> */}
-    <FormGender/>
+    
   </>
 );
 

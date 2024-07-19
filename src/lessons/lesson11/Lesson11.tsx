@@ -1,5 +1,5 @@
 import styles from './Lesson11.module.css'
-import LoginFormikForm from '../../components/LoginFormikForm/LoginFormikForm'
+import LoginFormikForm from '../../components/RobotFormikForm/RobotForm'
 
 export default function Lesson11() {
 
