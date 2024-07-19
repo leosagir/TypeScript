@@ -1,6 +1,5 @@
-import Lesson04 from '../../lessons/Lesson04/Lesson04'
-import HeroCard from '../HeroCard/HeroCard'
-import StarWarsGallery from '../StarWarsGallery/StarWarsGallery'
+import { Link, Outlet } from 'react-router-dom'
+
 import styles from './Layout.module.css'
 
 function Layout(){
@@ -8,11 +7,15 @@ function Layout(){
         <>
         <div className={styles.page}>
         <header className={styles.header}>
-            header
+           <Link to={'/'}>star wars gallery</Link>
+           <Link to={'/gender-form'}>gender form</Link>
+           <Link to={'/robot-form'}>robot form</Link>
+           <Link to={'/login-form'}>my form</Link>
+            
             </header>
         <main className={styles.main}>
-            main
-           <StarWarsGallery/>
+            <Outlet/>
+           
             </main>
         <footer className={styles.footer}>
             footer

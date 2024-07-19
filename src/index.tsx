@@ -1,32 +1,30 @@
 import ReactDOM from 'react-dom/client';
 
 import './index.css';
-// import Lesson06 from './lessons/lesson06/Lesson06';
-// import App from './app/App';
-// import Lesson07 from './lessons/lesson07/Lesson07';
+
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import StarWarsGallery from './components/StarWarsGallery/StarWarsGallery';
-import Lesson09 from './lessons/lesson09/Lesson09';
-import Lesson10 from './lessons/lesson10/Lesson10';
-import CatFact from './lessons/lesson10/Lesson10';
-import Lesson11 from './lessons/lesson11/Lesson11';
-import Lesson12 from './lessons/Lesson12/Lesson12';
+import FormGender from './components/FormGender/FormGender';
+import RobotForm from './components/RobotFormikForm/RobotForm';
+import LoginForm from './components/LoginForm/loginForm';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <>
-  <Lesson12/>
-  
-  {/* <Layout/> */}
- {/* <CatFact/> */}
-    {/* <App />
-    <Lesson06/>
-    <Lesson07 /> */}
-    {/* <Lesson11/> */}
-    
-  </>
+  <HashRouter>
+    <Routes>
+      <Route path='/' element={<Layout/>}>
+  <Route path='/' element={<StarWarsGallery/>}/>
+  <Route path='/gender-form' element={<FormGender/>}/>
+  <Route path='/robot-form' element={<RobotForm/>}/>
+  <Route path='/login-form' element={<LoginForm/>}/>
+
+
+    </Route>
+    </Routes>
+  </HashRouter>
 );
 
 
