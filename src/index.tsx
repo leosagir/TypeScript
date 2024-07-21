@@ -8,6 +8,9 @@ import StarWarsGallery from './components/StarWarsGallery/StarWarsGallery';
 import FormGender from './components/FormGender/FormGender';
 import RobotForm from './components/RobotFormikForm/RobotForm';
 import LoginForm from './components/LoginForm/loginForm';
+import Counter from './components/Counter/Counter';
+import Feedback from './components/Feedback/Feedback';
+import HomePage from './components/HomePage/HomePage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +23,9 @@ root.render(
   <Route path='/gender-form' element={<FormGender/>}/>
   <Route path='/robot-form' element={<RobotForm/>}/>
   <Route path='/login-form' element={<LoginForm/>}/>
+  <Route path='/counter' element={<Counter/>}/>
+  <Route path='/feedback' element={<Feedback/>}/>
+  <Route path='/home-page' element={<HomePage/>}/>
 
 
     </Route>

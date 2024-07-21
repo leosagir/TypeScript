@@ -4,23 +4,31 @@
     min-height: 100vh;
 }
 
-.header{
+.header {
     width: 100%;
     background-color: orange;
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-    .header>a{
-        color: white;
-        margin-right: 20px;
-        text-decoration: none;
-    }
-    .header >a:hover{
-        text-decoration: underline;
-    }
-
+  }
+  
+  .header > a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+  
+  .header > a:hover {
+    text-decoration: underline;
+  }
+  
+  .header > a.active {
+    text-decoration: underline;
+    color: black;
+    transition: 0;
+  }
+  
 .footer{
     width: 100%;
     background-color: #585050;

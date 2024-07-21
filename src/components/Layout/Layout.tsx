@@ -1,25 +1,22 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, Outlet, useLocation } from 'react-router-dom'
 
 import styles from './Layout.module.css'
+import Header from '../Header/Header'
+import Footer from '../Footer/Footer'
 
 function Layout(){
+    const location=useLocation()
+    console.log(location.pathname)
     return(
         <>
         <div className={styles.page}>
-        <header className={styles.header}>
-           <Link to={'/'}>star wars gallery</Link>
-           <Link to={'/gender-form'}>gender form</Link>
-           <Link to={'/robot-form'}>robot form</Link>
-           <Link to={'/login-form'}>my form</Link>
-            
-            </header>
+       
+            <Header/>
         <main className={styles.main}>
             <Outlet/>
            
             </main>
-        <footer className={styles.footer}>
-            footer
-            </footer>
+        <Footer/>
 </div>
         </>
     )
