@@ -18,7 +18,6 @@
 }
 
 .header > a.active {
-  text-decoration: underline;
   color: black;
-  transition: 0;
+  text-decoration: underline;
 }
