@@ -1,6 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import styles from './ProductPage.module.css';
+import MyButton from '../myButton/myButton';
+import Loader from '../Loader/Loader';
 
 interface Product {
   id: number;
@@ -22,7 +24,7 @@ export default function ProductPage() {
   }, [id]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <Loader/>;
   }
 
   return (
@@ -31,6 +33,8 @@ export default function ProductPage() {
       <img src={product.image} alt={product.title} className={styles.image} />
       <p className={styles.description}>{product.description}</p>
       <p className={styles.price}>${product.price.toFixed(2)}</p>
+      <Link to={'/shop'}><MyButton name='back to shop' type={'button'} /></Link>
+
     </div>
   );
 }
