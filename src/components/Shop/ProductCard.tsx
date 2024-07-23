@@ -18,10 +18,16 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className={styles.card}>
+        <div className={styles.imgWrapper}>
       <img src={product.image} alt={product.title} className={styles.image} />
+      </div>
+      <div className={styles.titleWrapper}>
       <h3 className={styles.title}>{product.title}</h3>
+      </div>
       <p className={styles.price}>${product.price.toFixed(2)}</p>
+      <div className={styles.descriptionWrapper}>
       <p className={styles.description}>{product.description}</p>
+      </div>
     </div>
   );
 }
