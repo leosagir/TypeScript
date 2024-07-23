@@ -1,6 +1,8 @@
 // ProductCard.tsx
 import React from 'react';
 import styles from './ProductCard.module.css';
+import MyButton from '../myButton/myButton';
+import { Link } from 'react-router-dom';
 
 interface Product {
   id: number;
@@ -28,6 +30,7 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className={styles.descriptionWrapper}>
       <p className={styles.description}>{product.description}</p>
       </div>
+      <Link to={String(product?.id)}><MyButton name='about product' type={'button'} /></Link>
     </div>
   );
 }

@@ -12,6 +12,7 @@ import Counter from './components/Counter/Counter';
 import Feedback from './components/Feedback/Feedback';
 import HomePage from './components/HomePage/HomePage';
 import Shop from './components/Shop/Shop';
+import ProductPage from './components/ProductPage/ProductPage';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -29,6 +30,7 @@ root.render(
   <Route path='/feedback' element={<Feedback/>}/>
   <Route path='/newComponent' element={<h3>New component</h3>}/>
   <Route path='/shop' element={<Shop/>}/>
+  <Route path='/shop/:id' element={<ProductPage/>}/>
   
 
 

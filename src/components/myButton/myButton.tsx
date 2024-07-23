@@ -3,7 +3,7 @@ import './myButton.css';
 
 interface MyButtonProps {
   type: 'button' | 'submit' | 'reset';
-  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   name?: string;
 }
 
