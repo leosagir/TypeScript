@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import ProductCard from './ProductCard';
 import styles from './Shop.module.css';
 import Loader from '../Loader/Loader';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { getProducts } from '../features/products/productsAction';
+import { RootState, AppDispatch } from '../../redux/store';
 
-interface Product {
+export interface IProduct {
   id: number;
   title: string;
   price: number;
@@ -14,42 +17,30 @@ interface Product {
   image: string;
 }
 
-const validationSchema = Yup.object().shape({
-  limit: Yup.number()
-    .required('Please enter a number')
-    .min(1, 'Minimum value is 1')
-    .max(20, 'Maximum value is 20')
-    .integer('Must be an integer')
-});
-
 export default function Shop() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const dispatch = useDispatch<AppDispatch>();
+  const { products, isLoading, error } = useSelector((state: RootState) => state.products);
   const [limit, setLimit] = useState<number>(5); // Default limit
 
   const formik = useFormik({
     initialValues: {
       limit: 5
     },
-    validationSchema,
+    validationSchema: Yup.object().shape({
+      limit: Yup.number()
+        .required('Please enter a number')
+        .min(1, 'Minimum value is 1')
+        .max(20, 'Maximum value is 20')
+        .integer('Must be an integer')
+    }),
     onSubmit: (values) => {
       setLimit(values.limit);
     }
   });
 
   useEffect(() => {
-    setIsLoading(true);
-    fetch(`https://fakestoreapi.com/products?limit=${limit}`)
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data);
-        setIsLoading(false);
-      })
-      .catch(error => {
-        console.error('Error fetching products:', error);
-        setIsLoading(false);
-      });
-  }, [limit]); // Depend on limit to refetch when it changes
+    dispatch(getProducts(limit));
+  }, [dispatch, limit]);
 
   return (
     <div className={styles.shop}>
@@ -78,6 +69,7 @@ export default function Shop() {
           ))}
         </div>
       )}
+      {error && <div className={styles.error}>{error}</div>}
     </div>
   );
 }

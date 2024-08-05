@@ -4,7 +4,7 @@ import styles from './ProductCard.module.css';
 import MyButton from '../myButton/myButton';
 import { Link } from 'react-router-dom';
 
-interface Product {
+interface IProduct {
   id: number;
   title: string;
   price: number;
@@ -14,7 +14,7 @@ interface Product {
 }
 
 interface ProductCardProps {
-  product: Product;
+  product: IProduct;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
